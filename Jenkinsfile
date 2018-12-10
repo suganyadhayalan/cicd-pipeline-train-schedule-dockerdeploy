@@ -16,7 +16,7 @@ pipeline {
                 script {
                     app = docker.build("suggan/train-schedule")
                     app.inside {
-                        sh 'echo $(curl 101.53.139.95:8084)'
+                        sh 'echo $(curl localhost:8084)'
                     }
                 }
             }
